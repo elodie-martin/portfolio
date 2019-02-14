@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Expériences{% endblock %}
+
+{% block titlePage %}
+    Expériences <a href="{{ path('dashboard_experience_create') }}" class="btn btn-primary btn-link text-white ml-2"><i class="fas fa-plus-circle pr-2"></i> Ajouter</a>
+{% endblock %}
+
+{% block body %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col" class="text-center">#</th>
+                <th scope="col" class="text-center">Titre</th>
+                <th scope="col" class="text-center">Nom entreprise</th>
+                <th scope="col" class="text-center">Code Postal</th>
+                <th scope="col" class="text-center">Lieu</th>
+                <th scope="col" class="text-center">Durée</th>
+                <th scope="col" class="text-center">Année</th>
+                <th scope="col" class="text-center"><i class="fas fa-cogs"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for experience in experiences %}
+                <tr>
+                    <td class="text-center">{{ experience.id }}</td>
+                    <td class="text-center">{{ experience.title }}</td>
+                    <td class="text-center">{{ experience.nameCompany }}</td>
+                    <td class="text-center">{{ experience.postCode }}</td>
+                    <td class="text-center">{{ experience.place}}</td>
+                    <td class="text-center">{{ experience.duration|date('%y ans et %m mois') }}</td>
+                    <td class="text-center">{{ experience.year|date('Y') }}</td>
+                    <td class="text-center">
+                        <a href="{{ path('dashboard_experience_edit', {'id': experience.id}) }}" class="mr-2"><i class="fas fa-edit"></i></a>
+                        <a href="{{ path('dashboard_experience_delete', {'id': experience.id}) }}"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
