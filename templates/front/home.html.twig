@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Elodie Martin{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg position-absolute">
+        <button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        {# <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#course">Parcours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div> #}
+    </nav>
+
+    <section id="home">
+        <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row min-vh-100">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-flex align-items-center justify-content-end p-0">
+                    <img src="/build/static/elodie.jpg" alt="photo-elodie">
+                    <div class="col-home h-100 position-absolute"></div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 d-flex justify-content-center align-items-center bloc-description">
+                    <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-12 pl-5 description text-justify">
+                        <h1 class="mb-0">Elodie Martin</h1>
+                        <h2>Développeuse web</h2>
+                        <p class="pt-4">Après deux ans d’études en DUT MMI (Métiers du Multimédia et de l’Internet) et
+                            une Licence Professionnelle en Webdesign, j'ai travaillé en entreprise dans le domaine du
+                            graphisme.</p>
+                        <p>J’ai choisi par la suite de me spécialiser dans le web avec une formation, Access Code
+                            School, que je suis actuellement.</p>
+                    </div>
+                    <div class="bloc-home position-absolute">
+                        <h3 class="text-uppercase font-weight-bold">Accueil</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+
+    </section>
+
+    <section id="projects">
+
+    </section>
+
+    <section id="course">
+
+    </section>
+
+    <section id="contact">
+
+        <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="row min-vh-100">
+                <div class="col-contact col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                    <h2 class="">Me contacter</h2>
+                    <p class="pt-3">Merci de me contacter via le formulaire pour toute demande. Si besoin, vous pouvez
+                        me joindre directement par téléphone.</p>
+                    <p class="font-weight-normal"><i class="fas fa-phone"></i> 06 77 10 21 59 <i class="fas fa-at ml-4 mr-2"></i>contact@elodie-martin.com</p>
+                    <div class="d-flex">
+                        <div class="circle-social-network circle-linkedin mr-3"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="circle-social-network circle-twitter mr-3"><i class="fab fa-twitter"></i></div>
+                        <div class="circle-social-network circle-github"><i class="fab fa-github"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer></footer>
+
+    <script src="{{ asset('build/app.js') }}"></script>
+
+</body>
+
+</html>
