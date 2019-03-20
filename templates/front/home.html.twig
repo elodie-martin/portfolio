@@ -39,7 +39,7 @@
     </nav>
 
     <section id="home">
-        <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="container-fluid">
             <div class="row min-vh-100">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-flex align-items-center justify-content-end p-0">
                     <img src="/build/static/elodie.jpg" alt="photo-elodie">
@@ -66,15 +66,76 @@
     </section>
 
     <section id="skills">
+        <div class="container-fluid">
+            <div class="row min-vh-100">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="text-center pb-5">Développement de sites web, création de sites vitrine, marchands...</h2>
+                </div>
 
+                <div class="d-lg-flex d-xl-flex justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
+                        <div class="bloc-skills">
+                            <h3 class="text-uppercase font-weight-bold position-absolute">Compétences</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
+                        <img src="/build/static/competences.jpg" alt="photo-elodie" class="mw-100">
+                        <div class="bloc-txt-skills position-relative mx-auto ml-1 float-lg-right float-xl-right p-3">
+                            <div class="p-3">
+                                <h4>Développement web</h4>
+                                <p>Développement, intégration de sites internet et responsive design</p>
+                                <div class="d-flex flex-wrap">
+                                    <img src="/build/static/html.svg" alt="img-html">
+                                    <img src="/build/static/css.svg" alt="img-css">
+                                    <img src="/build/static/sass.svg" alt="img-sass">
+                                    <img src="/build/static/javascript.svg" alt="img-javascript">
+                                    <img src="/build/static/php.svg" alt="img-php">
+                                    <img src="/build/static/bootstrap.svg" alt="img-bootstrap">
+                                    <img src="/build/static/twig.svg" alt="img-twig">
+                                    <img src="/build/static/my-sql.svg" alt="img-my-sql">
+                                    <img src="/build/static/wordpress.svg" alt="img-wordpress">
+                                    <img src="/build/static/webpack.svg" alt="img-webpack">
+                                    <img src="/build/static/symfony.svg" alt="img-symfony">
+                                    <img src="/build/static/git.svg" alt="img-git">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
+        <div class="container-fluid">
+            <div class="row min-vh-100">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="text-center">Découvrez quelques projets réalisés</h2>
+                </div>
 
+                <div class="d-lg-flex d-xl-flex justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
+                        
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
+                        <div class="bloc-skills">
+                            <h3 class="text-uppercase font-weight-bold position-absolute">Projets</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="course">
-
+        <div class="container-fluid">
+            <div class="row min-vh-100">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="text-center">En savoir plus sur mon parcours, mes formations, mon expérience
+                        professionnelle...</h2>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -88,7 +149,7 @@
                     <h2 class="">Me contacter</h2>
                     <p class="pt-3">Merci de me contacter via le formulaire pour toute demande. Si besoin, vous pouvez
                         me joindre directement par téléphone.</p>
-                    <p class="font-weight-normal"><i class="fas fa-phone"></i> 06 77 10 21 59 <i class="fas fa-at ml-4 mr-2"></i>contact@elodie-martin.com</p>
+                    {# <p class="font-weight-normal"><i class="fas fa-phone"></i> 06 77 10 21 59 <i class="fas fa-at ml-4 mr-2"></i>contact@elodie-martin.com</p> #}
                     <div class="d-flex">
                         <div class="circle-social-network circle-linkedin mr-3"><i class="fab fa-linkedin-in"></i></div>
                         <div class="circle-social-network circle-twitter mr-3"><i class="fab fa-twitter"></i></div>
@@ -100,7 +161,7 @@
 
     </section>
 
-    <footer></footer>
+    <footer><p class="text-center text-white p-3 mb-0">© 2019 - Elodie Martin - Tous droits réservés - <a href="#" class="">Mentions légales</a></p></footer>
 
     <script src="{{ asset('build/app.js') }}"></script>
 
