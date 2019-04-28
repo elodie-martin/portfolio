@@ -7,57 +7,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Elodie Martin{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg position-absolute">
-        <button>
+
+    <nav class="navbar navbar-expand-lg position-fixed">
+        <button class="btn-navbar-toggler-icon">
             <span class="navbar-toggler-icon"></span>
         </button>
+    </nav>
 
-        {# <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+    <div class="bloc-nav position-fixed w-100 h-100 d-flex justify-content-center align-items-center">
+        <i class="fas fa-times close-nav position-absolute"></i>
+        <div class="contenu-bloc-nav">
+
+            <ul class="navbar-nav mr-auto text-uppercase font-weight-bold">
+                <li class="nav-item li-home">
                     <a class="nav-link" href="#home">Accueil</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item li-skills">
                     <a class="nav-link" href="#skills">Compétences</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item li-projects">
                     <a class="nav-link" href="#projects">Projets</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item li-course">
                     <a class="nav-link" href="#course">Parcours</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item li-contact">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-        </div> #}
-    </nav>
+            <hr>
+
+            <div class="d-flex">
+                <a href="#" class="circle-social-network-nav circle-globe-nav mr-3"><i
+                        class="fas fa-globe globe-nav"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/elodie-martin-05b964115/"
+                    class="circle-social-network-nav circle-linkedin-nav mr-3" target="_blank"><i
+                        class="fab fa-linkedin-in linkedin-nav"></i></a>
+                <a href="https://twitter.com/ElodieMartin14" class="circle-social-network-nav circle-twitter-nav mr-3"
+                    target="_blank"><i class="fab fa-twitter twitter-nav"></i></a>
+                <a href="https://github.com/elodiemartin" class="circle-social-network-nav circle-github-nav"
+                    target="_blank"><i class="fab fa-github github-nav"></i></a>
+            </div>
+        </div>
+    </div>
 
     <section id="home">
         <div class="container-fluid">
             <div class="row min-vh-100">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-flex align-items-center justify-content-end p-0">
+                <div
+                    class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-flex align-items-center justify-content-end p-0">
                     <img src="/build/static/elodie.jpg" alt="photo-elodie">
                     <div class="col-home h-100 position-absolute"></div>
                 </div>
 
-                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 d-flex justify-content-center align-items-center bloc-description">
-                    <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-12 pl-5 description text-justify">
-                        <h1 class="mb-0">Elodie Martin</h1>
-                        <h2>Développeuse web</h2>
-                        <p class="pt-4">Après deux ans d’études en DUT MMI (Métiers du Multimédia et de l’Internet) et
-                            une Licence Professionnelle en Webdesign, j'ai travaillé en entreprise dans le domaine du
-                            graphisme.</p>
-                        <p>J’ai choisi par la suite de me spécialiser dans le web avec une formation, Access Code
-                            School, que je suis actuellement.</p>
-                    </div>
-                    <div class="bloc-home position-absolute">
-                        <h3 class="text-uppercase font-weight-bold">Accueil</h3>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 bloc-description ">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-12 pl-5 description text-justify">
+                            <h1 class="mb-0">Elodie Martin</h1>
+                            <h2>Développeuse web</h2>
+                            <p class="pt-4">Après deux ans d’études en DUT MMI (Métiers du Multimédia et de l’Internet)
+                                et
+                                une Licence Professionnelle en Webdesign, j'ai travaillé en entreprise dans le domaine
+                                du
+                                graphisme.</p>
+                            <p>J’ai choisi par la suite de me spécialiser dans le web avec une formation, Access Code
+                                School, que je suis actuellement.</p>
+                        </div>
+                        <div class="bloc-home position-absolute">
+                            <h3 class="text-uppercase font-weight-bold">Accueil</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,11 +91,14 @@
 
     <section id="skills">
         <div class="container-fluid">
-            <div class="row min-vh-100">
+            <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="text-center pb-5">Développement de sites web, création de sites vitrine, marchands...</h2>
+                    <h2 class="text-center pb-5">Développement de sites web, création de sites vitrine, marchands...
+                    </h2>
                 </div>
+            </div>
 
+            <div class="row">
                 <div class="d-lg-flex d-xl-flex justify-content-center">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
                         <div class="bloc-skills">
@@ -80,7 +107,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
                         <img src="/build/static/competences.jpg" alt="photo-elodie" class="mw-100">
-                        <div class="bloc-txt-skills position-relative mx-auto ml-1 float-lg-right float-xl-right p-3">
+                        <div class="bloc-text-skills position-relative mx-auto ml-1 float-lg-right float-xl-right p-3">
                             <div class="p-3">
                                 <h4>Développement web</h4>
                                 <p>Développement, intégration de sites internet et responsive design</p>
@@ -108,18 +135,230 @@
 
     <section id="projects">
         <div class="container-fluid">
-            <div class="row min-vh-100">
+            <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="text-center">Découvrez quelques projets réalisés</h2>
+                    <h2 class="text-center pb-5">Découvrez quelques projets réalisés</h2>
+                </div>
+            </div>
+
+            <div class="row row-skills">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3 col-projets">
+                    <div class="row m-0">
+                        <div
+                            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-lg-flex d-xl-flex justify-content-center">
+                            <div class="row w-100 m-0">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 projet-img">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img src="/build/static/competences.jpg" alt="img-projet1" class="mw-100">
+                                        <div class="content-details fadeIn-bottom">
+                                            <p class="font-weight-bold">Projet 1</p>
+                                            <hr>
+                                            <a href="#" class="btn btn-primary btn-projet" target="_blank">Voir le
+                                                projet</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-center mt-2">Projet 1</h4>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
+                    <div class="bloc-projets position-absolute">
+                        <h3 class="text-uppercase font-weight-bold position-absolute">Projets</h3>
+                    </div>
                 </div>
 
-                <div class="d-lg-flex d-xl-flex justify-content-center">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
-                        
+            </div>
+        </div>
+    </section>
+
+    <section id="course">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="text-center pb-4">En savoir plus sur mon parcours, mes formations, mon expérience
+                        professionnelle...</h2>
+                    <div class=" d-flex justify-content-center">
+                        <a class="btn btn-download text-white pl-4 pr-4" href="#">Téléchargez CV</a>
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="d-lg-flex d-xl-flex justify-content-center w-100">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
-                        <div class="bloc-skills">
-                            <h3 class="text-uppercase font-weight-bold position-absolute">Projets</h3>
+                        <div class="bloc-course">
+                            <h3 class="text-uppercase font-weight-bold position-absolute">Parcours</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 p-5">
+                        <div class="d-flex justify-content-between flex-wrap circles-course pt-5">
+                            {# <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div> #}
+                            {# <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div>
+                            <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div>
+                            <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div>
+                            <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div>
+                            <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div>
+                            <div class="circle pb-3">
+                                <div class="position-relative number">
+                                    <span
+                                        class="d-flex justify-content-center align-items-center h-100 text-center font-weight-bold mt-1">2019</span>
+                                </div>
+                            </div> #}
+                        </div>
+                        <div class="part-infos-course">
+                            {# <h4 class="mb-0 pt-5">Lorem ipsum dolor</h4> #}
+                            {# <h5>Lorem ipsum, 70000 Dolor</h5> #}
+                            {# <p class="mt-3">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quo rem ut omnis
+                                aperiam optio fuga error repellendus ea illo ducimus saepe nam impedit, delectus quas
+                                laborum velit dolores officia.
+                            </p> #}
                         </div>
                     </div>
                 </div>
@@ -127,41 +366,72 @@
         </div>
     </section>
 
-    <section id="course">
-        <div class="container-fluid">
-            <div class="row min-vh-100">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="text-center">En savoir plus sur mon parcours, mes formations, mon expérience
-                        professionnelle...</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="contact">
-
-        <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="row min-vh-100">
-                <div class="col-contact col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="text-center pb-5">N'hésitez pas à me contacter pour toutes informations supplémentaires
+                    </h2>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                    <h2 class="">Me contacter</h2>
-                    <p class="pt-3">Merci de me contacter via le formulaire pour toute demande. Si besoin, vous pouvez
-                        me joindre directement par téléphone.</p>
-                    {# <p class="font-weight-normal"><i class="fas fa-phone"></i> 06 77 10 21 59 <i class="fas fa-at ml-4 mr-2"></i>contact@elodie-martin.com</p> #}
-                    <div class="d-flex">
-                        <div class="circle-social-network circle-linkedin mr-3"><i class="fab fa-linkedin-in"></i></div>
-                        <div class="circle-social-network circle-twitter mr-3"><i class="fab fa-twitter"></i></div>
-                        <div class="circle-social-network circle-github"><i class="fab fa-github"></i></div>
+
+                <div class="row w-100 m-0">
+                    <div class="w-100 d-lg-flex d-xl-flex justify-content-center">
+
+                        <div
+                            class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-contact pl-5 pr-5 pt-5 pb-5">
+                            {{ form_start(formContact) }}
+                            
+                            {{ form_row(formContact.name, {'label': 'Nom', 'attr': {'class': 'mb-0'} }) }}
+                            {{ form_row(formContact.email, {'label': 'Email', 'attr': {'class': 'mb-0'} }) }}
+                            {{ form_row(formContact.subject, {'label': 'Sujet', 'attr': {'class': 'mb-0'} }) }}
+                            {{ form_row(formContact.message, {'label': 'Message', 'attr': {'class': 'mb-0'} }) }}
+                            {{ form_row(formContact.send, {'label': 'Envoyer', 'attr': {'class': 'pl-4 pr-4 mt-3'} } ) }}
+
+                            {{ form_end(formContact) }}
+
+                        </div>
+
+                        <div
+                            class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3 d-flex align-items-center">
+                            <div class="pl-4">
+                                <h4 class="pt-5 pt-sm-5 pt-md-5 pt-lg-0 pt-xl-0">Me contacter</h4>
+                                <p class="pt-3">Merci de me contacter via le formulaire pour toute demande. Si besoin,
+                                    vous
+                                    pouvez
+                                    me joindre directement par téléphone.</p>
+                                <p class="font-weight-normal"><i class="fas fa-phone"></i> 06 77 10 21 59 <i
+                                        class="fas fa-at ml-4 mr-2"></i>contact@elodie-martin.com</p>
+                                <div class="d-flex">
+                                    <a href="https://www.linkedin.com/in/elodie-martin-05b964115/"
+                                        class="circle-social-network-contact circle-linkedin-contact mr-3"
+                                        target="_blank"><i class="fab fa-linkedin-in linkedin-contact"></i></a>
+                                    <a href="https://twitter.com/ElodieMartin14"
+                                        class="circle-social-network-contact circle-twitter-contact mr-3"
+                                        target="_blank"><i class="fab fa-twitter twitter-contact"></i></a>
+                                    <a href="https://github.com/elodiemartin"
+                                        class="circle-social-network-contact circle-github-contact" target="_blank"><i
+                                            class="fab fa-github github-contact"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 p-0 p-sm-0 p-md-0 p-lg-3 p-xl-3">
+                            <div class="bloc-contact position-absolute">
+                                <h3 class="text-uppercase font-weight-bold position-absolute">Contact</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
-
     </section>
 
-    <footer><p class="text-center text-white p-3 mb-0">© 2019 - Elodie Martin - Tous droits réservés - <a href="#" class="">Mentions légales</a></p></footer>
+    <footer class="position-relative">
+        <p class="text-center text-white p-3 mb-0">© 2019 - Elodie Martin - Tous droits réservés - <a href="#"
+                class="text-white">Mentions légales</a></p>
+    </footer>
 
     <script src="{{ asset('build/app.js') }}"></script>
 

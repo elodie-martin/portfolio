@@ -18,6 +18,7 @@
                 <th scope="col" class="text-center">Lieu</th>
                 <th scope="col" class="text-center">Spécialité</th>
                 <th scope="col" class="text-center">Année</th>
+                <th scope="col" class="text-center">Description</th>
                 <th scope="col" class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
         </thead>
@@ -31,6 +32,7 @@
                     <td class="text-center">{{ formation.place }}</td>
                     <td class="text-center">{{ formation.specialty }}</td>
                     <td class="text-center">{{ formation.year|date('Y') }}</td>
+                    <td class="text-center">{{ formation.content }}</td>
                     <td class="text-center">
                         <a href="{{ path('dashboard_formations_edit', {'id': formation.id}) }}" class="mr-2"><i class="fas fa-edit"></i></a>
                         <a href="{{ path('dashboard_formations_delete', {'id': formation.id}) }}"><i class="fas fa-trash-alt"></i></a>

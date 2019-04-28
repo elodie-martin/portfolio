@@ -6,8 +6,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Annotation\ApiResource;
+
 
 /**
+ * @ApiResource(
+ *  attributes={
+ *         "normalization_context"={"groups"={"read"}},
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ProjetRepository")
  */
 class Projet
@@ -16,35 +24,41 @@ class Projet
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(min=10, max=255, minMessage="Votre titre doit comporter au moins {{ limit }} caractères", maxMessage="Votre titre ne peut pas contenir plus de {{ limit }} caractères")
+     * @Assert\Length(min=4, max=255, minMessage="Votre titre doit comporter au moins {{ limit }} caractères", maxMessage="Votre titre ne peut pas contenir plus de {{ limit }} caractères")
+     * @Groups({"read"})
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
      * @Assert\Length(min=10, minMessage="Votre description doit comporter au moins {{ limit }} caractères")
+     * @Groups({"read"})
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Url()
+     * @Groups({"read"})
      */
     private $link;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Url()
+     * @Groups({"read"})
      */
     private $picture;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Technologie", inversedBy="projets")
+     * @Groups({"read"})
      */
     private $technologies;
 

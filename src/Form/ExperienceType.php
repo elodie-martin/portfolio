@@ -24,19 +24,23 @@ class ExperienceType extends AbstractType
                 'with_years' => true,
                 'with_months' => true,
                 'with_days' => false,
+                'with_weeks' => true,
                 'placeholder' => [
                     'years' => 'Années',
-                    'months' => 'Mois'
+                    'months' => 'Mois',
+                    'weeks' => 'Semaines'
                 ],
                 'labels' => [
                     'years' => 'Années',
-                    'months' => 'Mois'
+                    'months' => 'Mois',
+                    'weeks' => 'Semaines'
                 ]
             ])
             ->add('year', DateType::class, [
                 'widget' => 'choice',
                 'years' => range (date('Y'), date('Y')-20)
-            ]);
+            ])
+            ->add('content');
     }
 
     public function configureOptions(OptionsResolver $resolver)

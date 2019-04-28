@@ -6,8 +6,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Annotation\ApiResource;
+
 
 /**
+ * @ApiResource(
+ *  attributes={
+ *         "normalization_context"={"groups"={"read"}},
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\TechnologieRepository")
  */
 class Technologie
@@ -21,7 +29,8 @@ class Technologie
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(min=4, max=255, minMessage="Votre nom doit comporter au moins {{ limit }} caractères", maxMessage="Votre nom ne peut pas contenir plus de {{ limit }} caractères")
+     * @Assert\Length(min=3, max=255, minMessage="Votre nom doit comporter au moins {{ limit }} caractères", maxMessage="Votre nom ne peut pas contenir plus de {{ limit }} caractères")
+     * @Groups({"read"})
      */
     private $name;
 

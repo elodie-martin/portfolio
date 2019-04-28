@@ -22,7 +22,8 @@ class FormationType extends AbstractType
             ->add('year', DateType::class, [
                 'widget' => 'choice',
                 'years' => range (date('Y'), date('Y')-20)
-            ]);
+            ])
+            ->add('content');
     }
 
     public function configureOptions(OptionsResolver $resolver)

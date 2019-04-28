@@ -18,6 +18,7 @@
                 <th scope="col" class="text-center">Lieu</th>
                 <th scope="col" class="text-center">Durée</th>
                 <th scope="col" class="text-center">Année</th>
+                <th scope="col" class="text-center">Description</th>
                 <th scope="col" class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
         </thead>
@@ -29,8 +30,21 @@
                     <td class="text-center">{{ experience.nameCompany }}</td>
                     <td class="text-center">{{ experience.postCode }}</td>
                     <td class="text-center">{{ experience.place}}</td>
-                    <td class="text-center">{{ experience.duration|date('%y ans et %m mois') }}</td>
+                    <td class="text-center">
+                        {% if experience.duration.y != 0 %}
+                            {{ experience.duration.y }} an{% if experience.duration.y != 1 %}s{% endif %}
+                        {% endif %}
+
+                        {% if experience.duration.m != 0 %}
+                            {{ experience.duration.m }} mois
+                        {% endif %}
+
+                        {% if experience.duration.d != 0 %}
+                            {{ experience.duration.d/7 }} semaine{% if experience.duration.d/7 != 1 %}s{% endif %}
+                        {% endif %}
+                    </td>
                     <td class="text-center">{{ experience.year|date('Y') }}</td>
+                    <td class="text-center">{{ experience.content }}</td>
                     <td class="text-center">
                         <a href="{{ path('dashboard_experience_edit', {'id': experience.id}) }}" class="mr-2"><i class="fas fa-edit"></i></a>
                         <a href="{{ path('dashboard_experience_delete', {'id': experience.id}) }}"><i class="fas fa-trash-alt"></i></a>

@@ -8,8 +8,9 @@
 // any CSS you require will output into a single css file (app.css in this case)
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 require('../../node_modules/bootstrap/dist/js/bootstrap.js');
-require('../js/dashboard.js');
 require('../js/front.js');
+require('../js/api.js');
+require('../js/dashboard.js');
 require('../scss/main_dashboard.scss');
 require('../scss/front.scss');
 
