@@ -10,11 +10,8 @@ const $ = require('jquery');
 global.$ = global.jQuery = $;
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 require('../../node_modules/bootstrap/dist/js/bootstrap.js');
-require('../js/menu-front.js');
-require('../js/front.js');
-require('../js/api.js');
-require('../js/modal.js');
-require('../scss/front.scss');
+require('../js/dashboard.js');
+require('../scss/main_dashboard.scss');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery'); 

@@ -14,10 +14,8 @@ Projets <a href="{{ path('dashboard_projets_create') }}" class="btn btn-primary 
             <tr>
                 <th scope="col" class="text-center">#</th>
                 <th scope="col" class="text-center">Titre</th>
-                <th scope="col" class="text-center">Description</th>
-                <th scope="col" class="text-center">Lien</th>
-                <th scope="col" class="text-center">Image</th>
-                <th scope="col" class="text-center">Technologies</th>
+                <th scope="col" class="text-center table-mobile-responsive">Description</th>
+                <th scope="col" class="text-center table-mobile-responsive">Technologies</th>
                 <th scope="col" class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
         </thead>
@@ -26,10 +24,8 @@ Projets <a href="{{ path('dashboard_projets_create') }}" class="btn btn-primary 
                 <tr>
                     <td class="text-center">{{ projet.id }}</td>
                     <td class="text-center">{{ projet.title }}</td>
-                    <td class="text-center">{{ projet.content }}</td>
-                    <td class="text-center">{{ projet.link }}</td>
-                    <td class="text-center">{{ projet.picture }}</td>
-                    <td class="text-center">
+                    <td class="text-center table-mobile-responsive">{{ projet.content }}</td>
+                    <td class="text-center table-mobile-responsive">
                         {% for technologie in projet.technologies %}
                             {{ technologie.name }}
                         {% endfor %}

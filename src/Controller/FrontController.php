@@ -35,12 +35,26 @@ class FrontController extends AbstractController
 
             $mailer->send($message);
 
-            return $this->redirectToRoute('home');
+            // return $this->redirectToRoute('home');
+            return $this->render('front/home.html.twig', [
+                'messageEnvoye' => 'messageEnvoye'
+            ]);
         }
 
         return $this->render('front/home.html.twig', [
             'controller_name' => 'FrontController',
-            'formContact' => $form->createView()
+            'formContact' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/mentions-legales", name="mentions_legales")
+     */
+    public function indexMentionsLegales()
+    {
+
+        return $this->render('front/mentions-legales.html.twig', [
+            'controller_name' => 'FrontController',
         ]);
     }
 }

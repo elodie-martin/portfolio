@@ -11,7 +11,7 @@
   <mj-body background-color="#8d7688">
     <mj-section>
       <mj-column width="100%">
-        <mj-image src="http://go.mailjet.com/tplimg/mtrq/b/ox8s/mg1q9.png" alt="header image" padding="0px"></mj-image>
+        <mj-image src="http://elodie-martin.com/build/static/mail.png" alt="header image" padding="0px"></mj-image>
       </mj-column>
     </mj-section>
     <mj-section padding-bottom="20px" padding-top="10px" >

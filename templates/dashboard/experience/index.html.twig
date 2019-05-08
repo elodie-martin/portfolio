@@ -13,12 +13,10 @@
             <tr>
                 <th scope="col" class="text-center">#</th>
                 <th scope="col" class="text-center">Titre</th>
-                <th scope="col" class="text-center">Nom entreprise</th>
-                <th scope="col" class="text-center">Code Postal</th>
-                <th scope="col" class="text-center">Lieu</th>
-                <th scope="col" class="text-center">Durée</th>
-                <th scope="col" class="text-center">Année</th>
-                <th scope="col" class="text-center">Description</th>
+                <th scope="col" class="text-center table-mobile-responsive">Nom entreprise</th>
+                <th scope="col" class="text-center table-mobile-responsive">Durée</th>
+                <th scope="col" class="text-center table-mobile-responsive">Année</th>
+                <th scope="col" class="text-center table-lg-responsive">Description</th>
                 <th scope="col" class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
         </thead>
@@ -27,10 +25,8 @@
                 <tr>
                     <td class="text-center">{{ experience.id }}</td>
                     <td class="text-center">{{ experience.title }}</td>
-                    <td class="text-center">{{ experience.nameCompany }}</td>
-                    <td class="text-center">{{ experience.postCode }}</td>
-                    <td class="text-center">{{ experience.place}}</td>
-                    <td class="text-center">
+                    <td class="text-center table-mobile-responsive">{{ experience.nameCompany }}</td>
+                    <td class="text-center table-mobile-responsive">
                         {% if experience.duration.y != 0 %}
                             {{ experience.duration.y }} an{% if experience.duration.y != 1 %}s{% endif %}
                         {% endif %}
@@ -43,8 +39,8 @@
                             {{ experience.duration.d/7 }} semaine{% if experience.duration.d/7 != 1 %}s{% endif %}
                         {% endif %}
                     </td>
-                    <td class="text-center">{{ experience.year|date('Y') }}</td>
-                    <td class="text-center">{{ experience.content }}</td>
+                    <td class="text-center table-mobile-responsive">{{ experience.year|date('Y') }}</td>
+                    <td class="text-center table-lg-responsive">{{ experience.content }}</td>
                     <td class="text-center">
                         <a href="{{ path('dashboard_experience_edit', {'id': experience.id}) }}" class="mr-2"><i class="fas fa-edit"></i></a>
                         <a href="{{ path('dashboard_experience_delete', {'id': experience.id}) }}"><i class="fas fa-trash-alt"></i></a>

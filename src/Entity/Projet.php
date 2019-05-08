@@ -62,6 +62,13 @@ class Projet
      */
     private $technologies;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Url()
+     * @Groups({"read"})
+     */
+    private $github;
+
     public function __construct()
     {
         $this->technologies = new ArrayCollection();
@@ -116,6 +123,18 @@ class Projet
     public function setPicture(string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(string $link): self
+    {
+        $this->github = $github;
 
         return $this;
     }

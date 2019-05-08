@@ -24,6 +24,7 @@ class ProjetType extends AbstractType
                 'multiple' => true,
                 'expanded' => true
             ])
+            ->add('github')
         ;
     }
 

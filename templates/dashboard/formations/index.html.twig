@@ -13,12 +13,9 @@
             <tr>
                 <th scope="col" class="text-center">#</th>
                 <th scope="col" class="text-center">Nom formation</th>
-                <th scope="col" class="text-center">Nom école</th>
-                <th scope="col" class="text-center">Code Postal</th>
-                <th scope="col" class="text-center">Lieu</th>
-                <th scope="col" class="text-center">Spécialité</th>
-                <th scope="col" class="text-center">Année</th>
-                <th scope="col" class="text-center">Description</th>
+                <th scope="col" class="text-center table-mobile-responsive">Nom école</th>
+                <th scope="col" class="text-center table-mobile-responsive">Année</th>
+                <th scope="col" class="text-center table-lg-responsive">Description</th>
                 <th scope="col" class="text-center"><i class="fas fa-cogs"></i></th>
             </tr>
         </thead>
@@ -27,12 +24,9 @@
                 <tr>
                     <td class="text-center">{{ formation.id }}</td>
                     <td class="text-center">{{ formation.nameEducation }}</td>
-                    <td class="text-center">{{ formation.nameSchool }}</td>
-                    <td class="text-center">{{ formation.postCode }}</td>
-                    <td class="text-center">{{ formation.place }}</td>
-                    <td class="text-center">{{ formation.specialty }}</td>
-                    <td class="text-center">{{ formation.year|date('Y') }}</td>
-                    <td class="text-center">{{ formation.content }}</td>
+                    <td class="text-center table-mobile-responsive">{{ formation.nameSchool }}</td>
+                    <td class="text-center table-mobile-responsive">{{ formation.year|date('Y') }}</td>
+                    <td class="text-center table-lg-responsive">{{ formation.content }}</td>
                     <td class="text-center">
                         <a href="{{ path('dashboard_formations_edit', {'id': formation.id}) }}" class="mr-2"><i class="fas fa-edit"></i></a>
                         <a href="{{ path('dashboard_formations_delete', {'id': formation.id}) }}"><i class="fas fa-trash-alt"></i></a>
