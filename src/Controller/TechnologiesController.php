@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TechnologiesController extends AbstractController
 {
     /**
-     * @Route("/dashboard/technologies", name="dashboard_technologies")
+     * @Route("/dashboard/technologies", name="dashboard_technologies", schemes={"https"})
      */
     public function index(TechnologieRepository $repoTechnologies, UserRepository $repoUsers)
     {
@@ -30,8 +30,8 @@ class TechnologiesController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/technologies/new", name="dashboard_technologies_create")
-     * @Route("/dashboard/technologies/{id}/edit", name="dashboard_technologies_edit")
+     * @Route("/dashboard/technologies/new", name="dashboard_technologies_create", schemes={"https"})
+     * @Route("/dashboard/technologies/{id}/edit", name="dashboard_technologies_edit", schemes={"https"})
      */
     public function form(Technologie $technologie = null, Request $request, ObjectManager $manager, UserRepository $repoUsers) {
         
@@ -60,7 +60,7 @@ class TechnologiesController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/technologies/{id}/supprimer", name="dashboard_technologies_delete")
+     * @Route("/dashboard/technologies/{id}/supprimer", name="dashboard_technologies_delete", schemes={"https"})
      */
     public function delete(Technologie $technologie, Request $request, ObjectManager $manager) {
 

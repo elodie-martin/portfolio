@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ExperienceController extends AbstractController
 {
     /**
-     * @Route("/dashboard/experience", name="dashboard_experience")
+     * @Route("/dashboard/experience", name="dashboard_experience", schemes={"https"})
      */
     public function index(ExperienceRepository $repoExperiences, UserRepository $repoUsers)
     {
@@ -29,8 +29,8 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/experience/new", name="dashboard_experience_create")
-     * @Route("/dashboard/experience/{id}/edit", name="dashboard_experience_edit")
+     * @Route("/dashboard/experience/new", name="dashboard_experience_create", schemes={"https"})
+     * @Route("/dashboard/experience/{id}/edit", name="dashboard_experience_edit", schemes={"https"})
      */
     public function form(Experience $experiences = null, Request $request, ObjectManager $manager, UserRepository $repoUsers) {
 
@@ -59,7 +59,7 @@ class ExperienceController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/experience/{id}/supprimer", name="dashboard_experience_delete")
+     * @Route("/dashboard/experience/{id}/supprimer", name="dashboard_experience_delete", schemes={"https"})
      */
     public function delete(Experience $experiences, Request $request, ObjectManager $manager) {
 

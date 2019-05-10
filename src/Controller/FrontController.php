@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class FrontController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="home", schemes={"https"})
      */
     public function index(Request $request, \Swift_Mailer $mailer)
     {
@@ -48,7 +48,7 @@ class FrontController extends AbstractController
     }
 
     /**
-     * @Route("/mentions-legales", name="mentions_legales")
+     * @Route("/mentions-legales", name="mentions_legales", schemes={"https"})
      */
     public function indexMentionsLegales()
     {

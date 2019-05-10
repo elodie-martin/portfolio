@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DashboardController extends AbstractController
 {
     /**
-     * @Route("/dashboard", name="dashboard")
+     * @Route("/dashboard", name="dashboard", schemes={"https"})
      */
     public function index(ProjetRepository $repoProjets, TechnologieRepository $repoTechnologies, FormationRepository $repoFormations, ExperienceRepository $repoExperiences, UserRepository $repoUsers)
     {

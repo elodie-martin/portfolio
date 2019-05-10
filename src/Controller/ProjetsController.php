@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProjetsController extends AbstractController
 {
     /**
-     * @Route("/dashboard/projets", name="dashboard_projets")
+     * @Route("/dashboard/projets", name="dashboard_projets", schemes={"https"})
      */
     public function index(ProjetRepository $repoProjets, UserRepository $repoUsers)
     {
@@ -31,8 +31,8 @@ class ProjetsController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/projets/new", name="dashboard_projets_create")
-     * @Route("/dashboard/projets/{id}/edit", name="dashboard_projets_edit")
+     * @Route("/dashboard/projets/new", name="dashboard_projets_create", schemes={"https"})
+     * @Route("/dashboard/projets/{id}/edit", name="dashboard_projets_edit", schemes={"https"})
      */
     public function form(Projet $projet = null, Request $request, ObjectManager $manager, UserRepository $repoUsers) {
 
@@ -61,7 +61,7 @@ class ProjetsController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/projets/{id}/supprimer", name="dashboard_projets_delete")
+     * @Route("/dashboard/projets/{id}/supprimer", name="dashboard_projets_delete", schemes={"https"})
      */
     public function delete(Projet $projet, Request $request, ObjectManager $manager) {
 

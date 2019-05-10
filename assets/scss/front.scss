@@ -404,8 +404,8 @@ h2 {
     .bloc-home {
         background-color: $home-color;
         right: 0;
-        top: 18%;
-        padding-top: 535px;
+        bottom: 12%;
+        padding-bottom: 535px;
         width: 60px;
 
         @media (max-width: 991px) {

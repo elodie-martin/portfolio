@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class FormationsController extends AbstractController
 {
     /**
-     * @Route("/dashboard/formations", name="dashboard_formations")
+     * @Route("/dashboard/formations", name="dashboard_formations", schemes={"https"})
      */
     public function index(FormationRepository $repoFormations, UserRepository $repoUsers)
     {
@@ -30,8 +30,8 @@ class FormationsController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/formations/new", name="dashboard_formations_create")
-     * @Route("/dashboard/formations/{id}/edit", name="dashboard_formations_edit")
+     * @Route("/dashboard/formations/new", name="dashboard_formations_create", schemes={"https"})
+     * @Route("/dashboard/formations/{id}/edit", name="dashboard_formations_edit", schemes={"https"})
      */
     public function form(Formation $formation = null, Request $request, ObjectManager $manager, UserRepository $repoUsers) {
         
@@ -60,7 +60,7 @@ class FormationsController extends AbstractController
     }
 
     /**
-     * @Route("/dashboard/formations/{id}/supprimer", name="dashboard_formations_delete")
+     * @Route("/dashboard/formations/{id}/supprimer", name="dashboard_formations_delete", schemes={"https"})
      */
     public function delete(Formation $formation, Request $request, ObjectManager $manager) {
 

@@ -11,14 +11,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SecurityController extends AbstractController
 {   
     /**
-     * @Route("/admin", name="dashboard_security_login")
+     * @Route("/admin", name="dashboard_security_login", schemes={"https"})
      */
     public function login() {
         return $this->render('dashboard/security/login.html.twig');
     }
 
     /**
-     * @Route("/dashboard/deconnexion", name="dashboard_security_logout")
+     * @Route("/dashboard/deconnexion", name="dashboard_security_logout", schemes={"https"})
      */
     public function logout() {}
 }
